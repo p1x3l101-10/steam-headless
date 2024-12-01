@@ -19,7 +19,6 @@ AddCapability=CAP_SYS_NICE
 SeccompProfile=unconfined
 AddDevice=/dev/fuse
 AddDevice=/dev/uinput
-AddDevice=/dev/dri/card1
 AddDevice=/dev/dri/renderD128
 
 [Service]

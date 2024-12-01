@@ -1,6 +1,6 @@
 pkgname=steam-headless
 pkgdesc="Online steam play"
-pkgver=0.0.0
+pkgver=1.0.0
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/p1x3l101-10/"
@@ -21,7 +21,7 @@ source=(
     'tmpfiles.conf'
     'sysuser.conf'
 )
-sha256sums=('8f10e139e61455be3f65e999968e252b3520a810b0e01c7d2a2051f09b23d8dd'
+sha256sums=('75f5932b2e3c7877c85da00c04b1d2522465ee6878440cc9975d8242fcc8aae6'
             '26b7df0d319a049f5168fc09232fd02d90c3d1f39d645f89099a28271cdfe9de'
             'd5c5566b929668592aeeec01f047e04f75cb73242afe564cb64069d9a8a5f133'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
