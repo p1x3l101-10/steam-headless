@@ -1,6 +1,6 @@
 pkgname=steam-headless
 pkgdesc="Online steam play"
-pkgver=2.0.1
+pkgver=2.0.2
 pkgrel=1
 arch=('x86_64')
 url="https://github.com/p1x3l101-10/"
