@@ -1,0 +1,6 @@
+[Unit]
+Description=Steam Headless Shim
+Requires=steam.service
+
+[Install]
+WantedBy=default.target
