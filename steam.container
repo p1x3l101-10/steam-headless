@@ -4,22 +4,16 @@ PartOf=steam.target
 
 [Container]
 Image=steam.image
-ShmSize=2G
 Network=host
 EnvironmentFile=/usr/lib/steam-headless/config.env
 EnvironmentFile=/etc/steam-headless/config.env
-Volume=/var/lib/steam-headless/home:/home/default:rw
-Volume=/var/lib/steam-headless/mnt-games:/mnt/games:rw
-Volume=/var/lib/steam-headless/.X11-unix:/tmp/.X11-unix:rw
-Volume=/var/lib/steam-headless/pulse:/tmp/pulse:rw
-Volume=/dev/input:/dev/input:ro
-AddCapability=CAP_NET_ADMIN
-AddCapability=CAP_SYS_ADMIN
-AddCapability=CAP_SYS_NICE
-SeccompProfile=unconfined
-AddDevice=/dev/fuse
+Volume=/var/lib/steam-headless:/etc/wolf:rw
+Volume=/tmp/steam-headless/sockets:/tmp/sockets:rw
+Volume=/dev:/dev:rw
+Volume=/run/udev:/run/udev:rw
+AddDevice=/dev/dri
 AddDevice=/dev/uinput
-AddDevice=/dev/dri/renderD128
+AddDevice=/dev/uhid
 
 [Service]
 Restart=always
