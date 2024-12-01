@@ -19,15 +19,13 @@ source=(
     'config.env'
     'config-system.env'
     'tmpfiles.conf'
-    'sysuser.conf'
 )
 sha256sums=('db2ee89bdb627aab7763a53fe01d156e4a47e27d696c222b8ffffb370633a49c'
             'aab2a270413f5dbc4e1074d725d8ba7496883e5cf96281788294011fe8422b7f'
             'd5c5566b929668592aeeec01f047e04f75cb73242afe564cb64069d9a8a5f133'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
             '68470c93f2061dba5b60d846be4556aba4348ce655d821c9709617c879a16cca'
-            'f5852484d8f525dcf0c9ac0288bcc71dab5ad1e991498122d00b99d8033ff23e'
-            '8c3ac9d1332146a20f25f63fc8d02af76213477919daa06fa0a93bb8d3d37bd3')
+            'c75ad7c7f04bf421beba55bfa35fa6d601760510ee8b52f01af8a2d593565368')
 options=("!purge") # I use .pod files, and purge removes them. Also there is nothing to purge here anyways
 
 package() {
@@ -42,5 +40,4 @@ package() {
         install -D -m644 $config-system.env $pkgdir/usr/lib/${pkgname}/$config.env
     done
     install -D -m644 tmpfiles.conf $pkgdir/usr/lib/tmpfiles.d/${pkgname}.conf
-    install -D -m644 sysuser.conf $pkgdir/usr/lib/sysusers.d/${pkgname}.conf
 }
